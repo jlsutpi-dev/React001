@@ -1,5 +1,7 @@
 import Counter from "./Counter";
+import Form from "./Form";
 import Greeting from "./Greeting";
+import List from "./List";
 import MyButton from "./MyButton";
 import Welcome from "./Welcome";
 
@@ -10,6 +12,8 @@ function App() {
       <Counter></Counter>
       <MyButton />
       <Greeting isLoggedIn={true} />
+      <List />
+      <Form />
     </>
   );
 }

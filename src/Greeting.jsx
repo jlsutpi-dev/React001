@@ -12,6 +12,7 @@ const Greeting = (props) => {
         >
           <h1>Welcome back from Naw Ram!</h1>
         </div>
+        <hr />
       </div>
     );
   } else {
