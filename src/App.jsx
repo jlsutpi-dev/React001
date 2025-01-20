@@ -1,19 +1,17 @@
-import Counter from "./Counter";
-import Form from "./Form";
-import Greeting from "./Greeting";
-import List from "./List";
-import MyButton from "./MyButton";
-import Welcome from "./Welcome";
+import MyForm from "./MyForm";
 
 function App() {
   return (
     <>
-      <Welcome name="Naw Ram" />
+      {/* <Welcome name="Naw Ram" />
       <Counter></Counter>
       <MyButton />
       <Greeting isLoggedIn={true} />
       <List />
-      <Form />
+      <Form /> */}
+      <h1>
+        <MyForm />
+      </h1>
     </>
   );
 }
