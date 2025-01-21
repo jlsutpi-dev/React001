@@ -1,4 +1,8 @@
-import MyForm from "./MyForm";
+import ArrayState from "./ArrayState";
+import CustomCounter from "./CustomCounter";
+import ObjectState from "./ObjectState";
+import TextInput from "./TextInput";
+import Toggle from "./Toggle";
 
 function App() {
   return (
@@ -9,9 +13,12 @@ function App() {
       <Greeting isLoggedIn={true} />
       <List />
       <Form /> */}
-      <h1>
-        <MyForm />
-      </h1>
+      {/* <Counter /> */}
+      <TextInput />
+      <Toggle />
+      <ArrayState />
+      <ObjectState />
+      <CustomCounter />
     </>
   );
 }
