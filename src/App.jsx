@@ -1,27 +1,39 @@
-import { useState } from "react";
-import Overlay from "./Overlay";
+import { useEffect, useState } from "react";
+import Counter from "./Counter";
+import DebouncedResize from "./DebouncedResize";
 
 function App() {
   const [count, setCount] = useState(0);
-  const [inputValue, setInputValue] = useState("");
-  const [isVisible, setIsVisible] = useState(false);
-  const [isOverlayVisible, setIsOverlayVisible] = useState(true);
-  const increment = () => {
-    setCount(count + 1);
-  };
-  const handleChange = (value) => {
-    setInputValue(value);
-  };
-  const handleBooleanChange = (value) => {
-    setIsVisible(value);
-  };
-  const onClose = () => {
-    setIsOverlayVisible(!isOverlayVisible);
-  };
+  // const [inputValue, setInputValue] = useState("");
+  // const [isVisible, setIsVisible] = useState(false);
+  // const [isOverlayVisible, setIsOverlayVisible] = useState(true);
+  // const increment = () => {
+  //   setCount(count + 1);
+  // };
+  // const handleChange = (value) => {
+  //   setInputValue(value);
+  // };
+  // const handleBooleanChange = (value) => {
+  //   setIsVisible(value);
+  // };
+  // const onClose = () => {
+  //   setIsOverlayVisible(!isOverlayVisible);
+  // };
+  useEffect(() => {
+    console.log("from parent");
+  }, [count]);
   return (
     <>
+      <Counter setCountParent={setCount} />
+      <h1>count from parent : {count}</h1>
+      <button
+        onClick={() => {
+          setCount(count + 1);
+        }}
+      >
+        click
+      </button>
       {/* <Welcome name="Naw Ram" />
-      <Counter></Counter>
       <MyButton />
       <Greeting isLoggedIn={true} />
       <List />
@@ -34,16 +46,15 @@ function App() {
       <CustomCounter /> */}
       {/* <h1>Count : {count}</h1>
       <h1> textinput : {inputValue}</h1>
-      <ChildCompo increment={increment} />
-      <ChildCompo2 handleChange={handleChange} />
-      <button
+      <ChildCompo increment={increment} /> */}
+
+      {/* <button
         onClick={() => {
           setIsVisible(!isVisible);
         }}
       >
         click
       </button>
-      {isVisible && <ChildCompo3 />} */}
       <h1>Overlay example</h1>
       <button
         onClick={() => {
@@ -52,7 +63,12 @@ function App() {
       >
         open overlay
       </button>
-      <Overlay onClose={onClose} isOverlayVisible={isOverlayVisible} />
+      <Overlay onClose={onClose} isOverlayVisible={isOverlayVisible} /> */}
+      {/* <FetchData /> */}
+      {/* <DebouncedInput /> */}
+      <DebouncedResize />
+      {/* <ColorChange /> */}
+      {/* <ExampleComponent /> */}
     </>
   );
 }
