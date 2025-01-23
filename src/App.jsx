@@ -1,6 +1,5 @@
-import { useEffect, useState } from "react";
-import Counter from "./Counter";
-import DebouncedResize from "./DebouncedResize";
+import { useState } from "react";
+import Timer from "./Timer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -19,20 +18,19 @@ function App() {
   // const onClose = () => {
   //   setIsOverlayVisible(!isOverlayVisible);
   // };
-  useEffect(() => {
-    console.log("from parent");
-  }, [count]);
+
   return (
     <>
-      <Counter setCountParent={setCount} />
-      <h1>count from parent : {count}</h1>
+      <Timer />
+      {/* <Counter setCountParent={setCount} /> */}
+      {/* <h1>count from parent : {count}</h1>
       <button
         onClick={() => {
           setCount(count + 1);
         }}
       >
         click
-      </button>
+      </button> */}
       {/* <Welcome name="Naw Ram" />
       <MyButton />
       <Greeting isLoggedIn={true} />
@@ -66,9 +64,10 @@ function App() {
       <Overlay onClose={onClose} isOverlayVisible={isOverlayVisible} /> */}
       {/* <FetchData /> */}
       {/* <DebouncedInput /> */}
-      <DebouncedResize />
+      {/* <DebouncedResize /> */}
       {/* <ColorChange /> */}
       {/* <ExampleComponent /> */}
+      {/* <TextInputWithFocusBtn /> */}
     </>
   );
 }
