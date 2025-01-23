@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Timer from "./Timer";
+import Overlay from "./Overlay";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <Timer />
+      {/* <Timer /> */}
       {/* <Counter setCountParent={setCount} /> */}
       {/* <h1>count from parent : {count}</h1>
       <button
@@ -68,6 +68,7 @@ function App() {
       {/* <ColorChange /> */}
       {/* <ExampleComponent /> */}
       {/* <TextInputWithFocusBtn /> */}
+      <Overlay />
     </>
   );
 }
