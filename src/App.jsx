@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Overlay from "./Overlay";
+import ThemeComponent from "./ThemeComponent";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -68,7 +68,8 @@ function App() {
       {/* <ColorChange /> */}
       {/* <ExampleComponent /> */}
       {/* <TextInputWithFocusBtn /> */}
-      <Overlay />
+      {/* <Overlay /> */}
+      <ThemeComponent />
     </>
   );
 }
