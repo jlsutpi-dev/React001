@@ -1,6 +1,5 @@
 import { useState } from "react";
-import ThemeComponent from "./ThemeComponent";
-
+import StyleComponent from "./styleComponent";
 function App() {
   const [count, setCount] = useState(0);
   // const [inputValue, setInputValue] = useState("");
@@ -69,7 +68,11 @@ function App() {
       {/* <ExampleComponent /> */}
       {/* <TextInputWithFocusBtn /> */}
       {/* <Overlay /> */}
-      <ThemeComponent />
+      {/* <ThemeComponent /> */}
+      <h1>React styling</h1>
+      {/* <InLineStyle /> */}
+      {/* <CssModule /> */}
+      <StyleComponent />
     </>
   );
 }
